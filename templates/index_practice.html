@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Generator</title>
+</head>
+<body>
+    <h1>QR Code Generator</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form action="/generate" method="POST" enctype="multipart/form-data">
+        <label for="data">Enter data:</label>
+        <input type="text" name="data" id="data">
+        <br>
+        <label for="upload">Upload symbol/logo (optional):</label>
+        <input type="file" name="upload" id="upload">
+        <br>
+<!--        <label for="file_type">File type:</label>-->
+<!--        <select name="file_type" id="file_type">-->
+<!--            <option value="png">PNG</option>-->
+<!--            <option value="pdf">PDF</option>-->
+<!--        </select>-->
+        <br>
+        <input type="submit" value="Generate QR Code">
+    </form>
+</body>
+</html>

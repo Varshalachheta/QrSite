@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Protected Image or PDF Result</title>
+</head>
+<body>
+    <h1>Protected Image or PDF Result</h1>
+
+    <img src="data:image/png;base64,{{ qr_code }}" alt="QR Code"><br><br>
+
+    <form action="/download" method="POST">
+        <input type="hidden" name="qr_code" value="{{ qr_code }}">
+        <label for="file_type">Select File Type:</label>
+        <select name="file_type" id="file_type">
+            <option value="png">PNG Image</option>
+            <option value="pdf">PDF Document</option>
+        </select><br><br>
+
+        <!-- Heading input -->
+  <div>
+    <label for="heading">Heading:</label>
+    <input type="text" id="heading" name="heading" maxlength="50">
+  </div>
+
+<!--  <button type="submit">Download PDF</button>-->
+
+
+        <input type="submit" value="Download">
+    </form>
+</body>
+</html>

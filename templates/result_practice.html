@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Result</title>
+    <style>
+        .qr-code {
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>QR Code Result</h1>
+    {% if qr_code %}
+        <img class="qr-code" src="data:image/png;base64,{{ qr_code }}" alt="QR Code">
+        <br>
+        <form action="/download" method="POST">
+            <input type="hidden" name="qr_code" value="{{ qr_code }}">
+            <label for="file_type">Download as:</label>
+            <select name="file_type" id="file_type">
+                <option value="png">PNG</option>
+                <option value="pdf">PDF</option>
+            </select>
+            <input type="submit" value="Download">
+        </form>
+    {% endif %}
+</body>
+</html>

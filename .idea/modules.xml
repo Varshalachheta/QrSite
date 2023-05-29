@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/QRsite.iml" filepath="$PROJECT_DIR$/.idea/QRsite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../python_flask/.idea/flask python.iml" filepath="$PROJECT_DIR$/../../python_flask/.idea/flask python.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../heart diagnoser/.idea/heart diagnoser.iml" filepath="$PROJECT_DIR$/../heart diagnoser/.idea/heart diagnoser.iml" />
+    </modules>
+  </component>
+</project>

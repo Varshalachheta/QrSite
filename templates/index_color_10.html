@@ -1,0 +1,36 @@
+<!-- index_color_9.html -->
+
+<form action="/generate" method="POST" enctype="multipart/form-data">
+  <input type="text" name="data" placeholder="Enter data" required>
+  <input type="file" name="upload">
+
+  <!-- Color options -->
+  <label for="color">QR Code Color:</label>
+  <select name="color" id="color">
+    <option value="black">Black</option>
+    <option value="red">Red</option>
+    <option value="green">Green</option>
+    <!-- Add more color options if needed -->
+  </select>
+
+  <label for="background">QR Code Background:</label>
+  <select name="background" id="background">
+    <option value="white">White</option>
+    <option value="black">Black</option>
+    <option value="blue">Blue</option>
+    <!-- Add more color options if needed -->
+  </select>
+
+  <!-- Heading input with color options -->
+  <label for="heading">Heading:</label>
+  <input type="text" id="heading" name="heading" maxlength="50">
+  <label for="heading_color">Heading Color:</label>
+  <select name="heading_color" id="heading_color">
+    <option value="black">Black</option>
+    <option value="red">Red</option>
+    <option value="green">Green</option>
+    <!-- Add more color options if needed -->
+  </select>
+
+  <button type="submit">Generate</button>
+</form>

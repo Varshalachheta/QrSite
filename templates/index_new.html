@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Protected Image or PDF Generator</title>
+</head>
+<body>
+    <h1>Protected Image or PDF Generator</h1>
+
+    <form action="/generate" method="POST" enctype="multipart/form-data">
+        <label for="data">Data:</label>
+        <input type="text" name="data" id="data" required><br><br>
+
+        <label for="upload">Upload Symbol/Logo (optional):</label>
+        <input type="file" name="upload" id="upload"><br><br>
+
+        <label for="heading">Heading:</label>
+        <input type="text" name="heading" id="heading" maxlength="50"><br><br>
+
+        <input type="submit" value="Generate">
+    </form>
+
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
