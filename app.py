@@ -9,7 +9,6 @@ from PIL import Image, ImageDraw, ImageFont
 import base64
 from io import BytesIO
 from reportlab.pdfgen import canvas
-from reportlab.lib.pagesizes import letter
 import secrets
 
 
@@ -47,7 +46,7 @@ def generate():
 
     # Create the image from the QRCode object with specified fill and background colors
     img = qr.make_image(fill_color=color, back_color=background)
-
+    # img = qr.make_image(back_color=(255, 165, 0), fill_color=(0, 49, 128))
 
     # Add symbol/logo to the center of the QR code if uploaded
     if upload:
@@ -79,7 +78,6 @@ def generate():
 
         img = qr_with_logo  # Update the image variable with the QR code image containing the logo
 
-    # Wrap heading text to multiple lines
     # Wrap heading text to multiple lines
     if heading:
         draw = ImageDraw.Draw(img)  # Create a drawing object to draw on the image

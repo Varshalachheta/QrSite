@@ -46,7 +46,8 @@ def generate():
     qr.add_data(data)
     qr.make(fit=True)
 
-    img = qr.make_image(fill_color=color, back_color=background)
+    # img = qr.make_image(fill_color=color, back_color=background)
+
 
     # Calculate the size of the symbol/logo based on the length of the input string
     symbol_size = min(max(len(data) // 2, 50), 200)
