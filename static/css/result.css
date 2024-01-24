@@ -1,63 +1,73 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
-}
-
-h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 30px;
-}
-
-form {
-    max-width: 600px;
-    margin: 20px auto;
-    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(90deg, rgb(129, 154, 137) 0%, rgb(21, 154, 70) 100%, rgb(12, 131, 48) 100%);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+  color: #282727;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-img {
-    display: block;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #faf6f6;
+  }
+  
+  form {
+    max-width: 600px;
     margin: 0 auto;
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+    background-color: rgba(210, 241, 187, 0.8);
+    padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-label {
+    border-radius: 10px;
+    text-align: left;
+  }
+  
+  label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     color: #333;
-}
-
-input,
-select {
+  }
+  
+  select,
+  input[type="text"] {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-}
-
-button {
-    background-color: #4caf50;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
+  }
+  
+  select {
+    height: 36px;
+  }
+  
+  input[type="submit"] {
     cursor: pointer;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-/* Add more styles as needed */
+    background-color: #2a692e;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+    text-align: center;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #109f61;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 600px) {
+    form {
+      padding: 15px;
+    }
+  
+    input[type="text"],
+    select,
+    input[type="submit"] {
+      width: calc(100% - 20px);
+    }
+  }
