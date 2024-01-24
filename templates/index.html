@@ -1,57 +1,58 @@
 <!-- index_color_9.html -->
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>qr site</title>
-    <link rel="stylesheet" href="../static/css/index.css">
-</head>
-<body>
-    <h1>QR SITE</h1>
-<form action="/generate" method="POST" enctype="multipart/form-data">
-  <input type="text" name="data" placeholder="Enter data" required>
-  <input type="file" name="upload">
+    <link rel="stylesheet" href="../static/css/index.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@500&family=Edu+VIC+WA+NT+Beginner:wght@400;500&family=Square+Peg&display=swap");
+    </style>
+  </head>
+  <body>
+    <div class="title">
+      <h2>Qrsite</h2>
+    </div>
+    <div class="container">
+      <!-- <h1 class="title">Qrsite</h1> -->
+      <form action="/generate" method="POST" enctype="multipart/form-data">
+        <div class="info">
+          <div class="data">
+            <label for="data">Enter Data :</label>
+            <input type="text" name="data" placeholder="Enter" required />
+          </div>
+          <div class="file">
+            <label for="file">Upload File :</label>
+            <input type="file" name="upload" />
+          </div>
+          <div class="colorbox">
+            <label for="color">QR Code Color:</label>
+            <input type="color" name="color" id="color" value="#000000" />
+          </div>
+          <div class="colorbox">
+            <label for="background">QR Code Background:</label>
+            <input
+              type="color"
+              name="background"
+              id="background"
+              value="#ffffff"
+            />
+          </div>
+          <div class="heading">
+            <label for="line">Description</label>
+            <input
+              type="description"
+              name="heading"
+              placeholder="Write Description"
+            />
+          </div>
+          <div class="submitbtn">
+            <input type="Submit" value="Generate" />
+          </div>
+        </div>
+      </form>
+    </div>
 
-  <!-- Color options -->
-  <label for="color">QR Code Color:</label>
-  <select name="color" id="color">
-    <option value="black">Black</option>
-    <option value="red">Red</option>
-    <option value="green">Green</option>
-    <option value="blue">Blue</option>
-    <option value="violet">Violet</option>
-    <option value="white">White</option>
-    <!-- Add more color options if needed -->
-  </select>
-
-  <label for="background">QR Code Background:</label>
-  <select name="background" id="background">
-    <option value="white">White</option>
-    <option value="black">Black</option>
-    <option value="red">Red</option>
-    <option value="green">Green</option>
-    <option value="blue">Blue</option>
-    <option value="violet">Violet</option>
-
-    <!-- Add more color options if needed -->
-  </select>
-
-  <!-- Heading input with color options -->
-  <label for="heading">Heading:</label>
-  <input type="text" id="heading" name="heading"  maxlength="50">
-  <label for="heading_color">Heading Color:</label>
-  <select name="heading_color" id="heading_color">
-    <option value="black">Black</option>
-    <option value="red">Red</option>
-    <option value="green">Green</option>
-    <option value="blue">Blue</option>
-    <option value="violet">Violet</option>
-    <option value="white">White</option>
-    <!-- Add more color options if needed -->
-  </select>
-
-  <button type="submit">Generate</button>
-</form>
-<script  src="..\static/script/script.js"></script>
-</body>
+    <script src="..\static/script/script.js"></script>
+  </body>
 </html>

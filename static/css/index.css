@@ -1,85 +1,151 @@
-/* Body and Heading Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f2f2f2;
-    margin: 0;
+/* body{
     padding: 0;
-}
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(30,176,180,1) 100%, rgba(12,111,131,1) 100%);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+    font-family: 'Arial', sans-serif;
+   
+} */
 
-h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 30px;
-}
 
-/* Form Styles */
-form {
-    max-width: 600px;
-    margin: 20px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+body,
 
-/* Input and Label Styles */
-label {
-    display: block;
-    margin-bottom: 8px;
-    color: #333;
-}
-
+h2,
+p,
+form,
 input,
-select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+label {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-/* Button Styles */
-button {
-    background-color: #4caf50;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
+body {
+  
+  line-height: 1.6;
+  /* background: linear-gradient(45deg, #31709a, #195934); 
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s infinite alternate; */
+  background: linear-gradient(90deg, rgb(129, 154, 137) 0%, rgb(21, 154, 70) 100%, rgb(12, 131, 48) 100%);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+  color: #282727;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(210, 241, 187, 0.8); 
+  box-shadow: 0 0 10px rgba(28, 28, 28, 0.1);
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f0f0f0;
+  font-family: 'Square Peg', sans-serif;
+
+}
+
+h2 {
+  font-family: 'Edu NSW ACT Foundation', sans-serif;
+  font-weight: 500;
+  font-size: 4em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.data,
+.file,
+.colorbox,
+.heading,
+.submitbtn {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 1em; 
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+input[type="color"] {
+  height: 36px;
+}
+
+.submitbtn input[type="submit"] {
     cursor: pointer;
-    font-size: 16px;
+    background-color: #2a692e; 
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submitbtn input[type="submit"]:hover {
+    background-color: #127227; /* Darker blue color on hover */
+  }
+
+.container:hover {
+  background-color: rgba(255, 255, 255, 0.9); /* Lighten background on hover */
 }
 
-button:hover {
-    background-color: #45a049;
+input:hover {
+  background-color: #f3e6e6; /* Lighten input background on hover */
 }
 
-/* Heading and Color Options Styles */
-#heading {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  .info {
+    flex-direction: column;
+  }
 
-#heading_color,
-#color,
-#background {
+  .data,
+  .file,
+  .colorbox,
+  .heading,
+  .submitbtn {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+  }
 }
-
-/* Script Styles (Assuming it's for responsiveness) */
-@media only screen and (max-width: 600px) {
-    form {
-        padding: 10px;
-    }
-}
-
-/* Add more styles as needed */
